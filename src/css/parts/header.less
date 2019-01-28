@@ -1,0 +1,150 @@
+/*header*/
+
+header {
+    box-sizing: border-box;
+    padding: 0 50px;
+    min-width: 360px;
+	position: relative;
+}
+
+.logo {
+	font-size: 36px;
+	font-weight: 700;
+	text-decoration: none;
+	color: rgb(0,0,0);
+	margin: auto 0;
+}
+
+.menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: 0.04em; 
+}
+
+.menu li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+.menu a {
+    display: inline-block;   
+    font-size: 13px;
+	font-weight: 700;
+    font-family: "Acrom";
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 25px 15px;
+	transition: color 0.2s linear; 
+}
+
+.menu a:hover {
+	color: #b7b7b7;
+}
+
+.menu>li:first-child a {
+    padding: 25px 15px 25px 0;
+}
+
+.header__button {
+    position: absolute;
+    right: 40px;
+    top: 9px;
+}
+
+/*burger*/
+
+.burger {
+    display: none;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 15px;
+    top: 9px;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.burger span, .burger span::before, .burger span::after {
+    display: block;
+    cursor: pointer; 
+    height: 2px;
+    width: 30px;
+    background: #fff;
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    transition: all .2s ease-in-out;
+}
+
+.burger span::before {
+    content: '';
+    left: 0;
+}
+
+.burger span::after {
+    content: '';
+    left: 0;
+    top: 22px;
+}
+
+.burger_active span {
+    background-color: transparent;
+}
+    
+ .burger_active span::before  {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+ .burger_active span::after  {
+    transform: rotate(-45deg);
+    top: 10px;
+} 
+
+
+@media screen and (max-width: 1279px) {
+ 
+    header {
+        padding: 68px 0 0;
+    }
+    
+	.header__button{
+		right: 15px;
+		background: #fff3f6;
+		border-color: #fff3f6;
+		color: #000;
+	}
+	
+    header .burger {
+        display: block;
+    }
+	
+	header .navbar{
+		width: 100%;
+	}
+    
+    header .menu {
+		display: none; 
+		text-align: center;
+		background: #ffd9e4;
+    }
+    
+    header .menu li {
+        float: none;
+    }
+    
+    header .menu li a,
+	header .menu>li:first-child a {
+		display: block;
+		border-bottom: 1px solid #fff3f6;
+		padding: 23px 15px;
+		color: #000;
+		font-size: 12px;
+    } 
+}
+ 
+

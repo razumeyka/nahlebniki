@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('template/head.html')
+<body class="home">
+    @@include('template/header.html')
+<!--
+    <div class="main-screen">
+    	<div class="wrapper flex_between">
+    		<div class="main-screen__text">
+    			<div class="caption_on-black">Собираем фирменные</div>
+    			<div class="caption_on-black">рецепты по свету!</div>
+    			<div class="small-caption_on-black">Есть че? Напиши нам об этом срочно!</div>
+    		</div>
+    		@@include('template/form.html')
+    	</div>
+    </div>
+-->
+    <div class="flex">
+		<div class="author-plates flex">
+			<div class="author-plates__plate author-plates__plate_author1"></div>
+			<div class="author-plates__plate author-plates__plate_author2"></div>
+			<div class="author-plates__plate author-plates__plate_author3"></div>
+			<div class="author-plates__plate author-plates__plate_author4"></div>
+			<div class="author-plates__plate author-plates__plate_author5"></div>
+			<div class="author-plates__plate author-plates__plate_author6"></div>
+		</div>
+		<div class="nahlebniki-plates">
+			<div class="nahlebniki-plates__photo"></div>
+			<div class="nahlebniki-plates__text">Это "Андреевский лаваш" - фирменная закуска Андрея</div>
+		</div>
+   		<div class="author-plates_right flex">
+			<div class="author-plates__plate author-plates__plate_author1"></div>
+			<div class="author-plates__plate author-plates__plate_author2"></div>
+			<div class="author-plates__plate author-plates__plate_author4"></div>
+			<div class="author-plates__plate author-plates__plate_author5"></div>
+		</div>
+    </div>
+    <div class="recipes">
+    	<div class="wrapper">
+    		<h1 class="caption">Рецепты</h1>
+    		<a href="#" class="recipes__link">Смотреть все рецепты</a>
+    		<div class="recipes__inner flex">
+    			<div class="recipes__item-wr">
+					<a href="#" class="recipes__item">
+						<div class="recipes__photo recipes__photo_vert"></div>
+						<div class="recipes__text">Вертолетики</div>
+						<div class="recipes__author">
+							<div class="recipes__photo recipes__photo_elena"></div>
+							<div class="recipes__text">Елена</div>
+							<div class="recipes__text">Борисов, Беларусь</div>
+						</div>
+					</a>
+    			</div>
+    			<div class="recipes__item-wr">
+					<a href="#" class="recipes__item">
+						<div class="recipes__photo recipes__photo_burger"></div>
+						<div class="recipes__text">Бургер</div>
+						<div class="recipes__author">
+							<div class="recipes__photo recipes__photo__alex"></div>
+							<div class="recipes__text">Александр</div>
+							<div class="recipes__text">Минск, Беларусь</div>
+						</div>
+					</a>
+   				</div>
+    			<div class="recipes__item-wr">
+					<a href="#" class="recipes__item">
+						<div class="recipes__photo recipes__photo_lavash"></div>
+						<div class="recipes__text">Андреевский лаваш</div>
+						<div class="recipes__author">
+							<div class="recipes__photo recipes__photo_andrey"></div>
+							<div class="recipes__text">Андрей</div>
+							<div class="recipes__text">Орша, Беларусь</div>
+						</div>
+					</a>
+   				</div>
+    			<div class="recipes__item-wr">
+					<a href="#" class="recipes__item">
+						<div class="recipes__photo recipes__photo_syrnik"></div>
+						<div class="recipes__text">Львовский сырник</div>
+						<div class="recipes__author">
+							<div class="recipes__photo recipes__photo_anna"></div>
+							<div class="recipes__text">Анна</div>
+							<div class="recipes__text">Львов, Украина</div>
+						</div>
+					</a>
+				</div>
+    		</div>
+    	</div>
+    </div>
+    @@include('template/insta.html') 
+    @@include('template/footer.html')          
+</body>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/main.js"></script>
+</html> 

@@ -1,0 +1,30 @@
+mixin recipe(recipeLink, recipeName, authorName, cityName)
+	a.recipes__item-wr(href='#{recipeLink}')
+		.recipes__photo
+		.recipes__photo.recipes__photo_author
+		.recipes__text
+			.recipes__caption=recipeName
+			.recipes__author=authorName
+			.recipes__city=cityName	
+
+.recipes
+	.wrapper
+		h1(class="caption") Что здесь вкусненького
+		.recipes__inner.flex
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+			.recipes__item
+				+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+			.recipes__item
+				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+		a(href="#" class="button") Смотреть все рецепты

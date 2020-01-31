@@ -1,0 +1,52 @@
+.about-screen {
+	padding: 70px 0;
+}
+
+.photo-info__photos {
+	width: 350px;
+	height: 400px;
+}
+
+.photo-info__photo {
+	background: url(../../images/nahlebniki1.JPG) no-repeat center top;
+	background-size: contain;
+	width: 350px;
+	height: 400px;
+}
+
+.photo-info__photo_2 {
+	background: url(../../images/nahlebniki2.JPG) no-repeat center top;
+	background-size: contain;
+}
+
+.photo-info__photo_3 {
+	background: url(../../images/nahlebniki3.JPG) no-repeat center top;
+	background-size: contain;
+}
+
+.photo-info__photo_4 {
+	background: url(../../images/nahlebniki4.JPG) no-repeat center top;
+	background-size: contain;
+}
+
+.photo-info__photo_5 {
+	background: url(../../images/nahlebniki5.JPG) no-repeat center top;
+	background-size: contain;
+}
+
+.photo-info__info {
+	flex: 1;
+	box-sizing: border-box;
+	padding: 0 0 0 40px;
+}
+
+.photo-info__caption {
+	text-align: left;
+}
+
+.photo-info__info p {
+	font-size: 18px;  
+	line-height: 1.55;
+	color: $black-text;
+	margin: 8px 0;
+}

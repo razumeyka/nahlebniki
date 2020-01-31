@@ -1,0 +1,12 @@
+- var links = ["Главная", "Рецепты", "Блог", "О нас", "Покормить нахлебников"];
+
+header
+	.wrapper.flex_between
+		a(class="logo" href="/")
+		nav(class="navbar")
+			ul(class="menu")
+				for name in links
+					li
+						a(href="#")= name
+		.burger
+			span

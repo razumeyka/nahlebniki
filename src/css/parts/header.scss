@@ -7,26 +7,27 @@ header {
 	position: relative;
 }
 
+header .wrapper {
+	align-items: center;
+}
+
 .logo {
-	font-size: 36px;
-	font-weight: 700;
-	text-decoration: none;
-	color: rgb(0,0,0);
+	background: url(../../images/logo2.png) no-repeat center;
+	background-size: contain;
+	width: 300px;
+	height: 100px;
 	margin: auto 0;
 }
 
 .menu {
-    display: block;
+    display: flex;
+	align-items: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    letter-spacing: 0.04em; 
 }
 
 .menu li {
     list-style: none;
-    float: left;
-    position: relative;
 }
 
 .menu a {
@@ -34,7 +35,7 @@ header {
     font-size: 13px;
 	font-weight: 700;
     font-family: "Acrom";
-    color: rgb(0, 0, 0);
+    color: $white-text;
     text-decoration: none;
     text-transform: uppercase;
     padding: 25px 15px;
@@ -42,11 +43,23 @@ header {
 }
 
 .menu a:hover {
-	color: #b7b7b7;
+	color: $bright-color;
 }
 
-.menu>li:first-child a {
-    padding: 25px 15px 25px 0;
+.menu>li:last-child a {
+    padding: 25px 0px 25px 15px;
+	animation: color 1s ease-in-out infinite;
+    -webkit-animation: color 1s ease-in-out infinite;
+}
+
+.menu>li:last-child a:hover {
+	animation: none;
+    -webkit-animation: none;
+}
+
+@keyframes color {
+	50% { color: $bright-color; }
+	100% { color: $white-text;}
 }
 
 .header__button {

@@ -1,0 +1,37 @@
+- var ingredients = ["Лаваш - 2 шт", "Рикотта - 250г", "Сыр сулугуни - 250г", "Помидиры - 1 шт", "Зелень"];
+
+.recipe-screen
+	.recipe-header.flex
+		img.recipe-header__author-photo(src="images/andrey.jpg" alt="")
+		.recipe-header__main-photo
+			img(src="images/lavash.jpg" alt="")
+			.recipe-header__author
+				.recipe-header__caption Андреевский лаваш
+				.recipe-header__name Андрей Разумейко
+				.recipe-header__country Беларусь, г.Орша
+	.wrapper
+		.recipe.white-block
+			.columns.flex
+				.columns__left-column
+					.recipe__caption Немного предистории
+					p.recipe__story Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.
+					.recipe__caption Приготовление
+					.recipe__small-caption Шаг 1
+					p.recipe__description Натереть сыр на крупной тёрке
+					img.recipe__photo(src="images/lavash.jpg" alt="")
+					.recipe__small-caption Шаг 2
+					p.recipe__description Смазать лаваш рикоттой, посыпать сыром, небольшими ломтиками помидор и зеленью
+					.recipe__photos.flex
+						.recipe__photo-wr
+							img.recipe__photo(src="images/lavash.jpg" alt="")
+						.recipe__photo-wr
+							img.recipe__photo(src="images/lavash.jpg" alt="")
+					.recipe__small-caption Шаг 3
+					p.recipe__description Отправить в духовку на 180°С на 10-15 минут до расплавления сыра
+					img.recipe__photo(src="images/lavash.jpg" alt="")
+				.columns__right-column
+					.recipe__caption Ингредиенты
+					ul.ingredients-list
+						for item in ingredients
+							li= item
+								

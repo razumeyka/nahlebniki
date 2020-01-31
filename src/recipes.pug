@@ -1,0 +1,41 @@
+extends template/inner-page.pug
+
+mixin recipe(recipeLink, recipeName, authorName, cityName)
+	a.recipes__item-wr(href='#{recipeLink}')
+		.recipes__photo
+		.recipes__photo.recipes__photo_author
+		.recipes__text
+			.recipes__caption=recipeName
+			.recipes__author=authorName
+			.recipes__city=cityName
+					
+block content
+	include template/header
+	.recipes
+		.wrapper
+			h1(class="caption") Рецепты
+			.filters.flex
+				a.filters__button.button.button_framed.active(href='#') Завтраки
+				a.filters__button.button.button_framed(href='#') Салаты
+				a.filters__button.button.button_framed(href='#') Закуски
+				a.filters__button.button.button_framed(href='#') Горячее
+				a.filters__button.button.button_framed(href='#') Десерты
+			.recipes__inner.flex
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+				.recipes__item
+					+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+				.recipes__item
+					+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+	include template/insta
+	include template/footer

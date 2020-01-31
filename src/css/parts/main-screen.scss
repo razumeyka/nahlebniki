@@ -1,0 +1,104 @@
+.main-screen {
+	border-top: 1px solid #292929;
+	border-bottom: 1px solid #292929;
+}
+
+.author-plates {
+	width: 35%;
+}
+
+.author-plates__plate {
+	width: 33.3333%;
+	position: relative;
+	cursor: pointer;
+	&:before {
+		content: "";
+		background: rgba(0,0,0,0.4);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&:hover:before {
+		display: none;
+	}
+}
+
+.author-plates__plate_author1 {
+	background: url(../images/genia.jpg) no-repeat center;
+	background-size: contain;
+}
+
+.author-plates__plate_author2 {
+	background: url(../images/andrey.JPG) no-repeat center;
+	background-size: contain;
+}
+
+.author-plates__plate_author3 {
+	background: url(../images/anya.JPG) no-repeat center;
+	background-size: contain;
+}
+
+.author-plates__plate_author4 {
+	background: url(../images/nevena.jpg)  no-repeat center;
+	background-size: contain;
+}
+
+.author-plates__plate_author5 {
+	background: url(../images/mama.jpg) no-repeat center;
+	background-size: contain;
+}
+
+.author-plates__plate_author6 {
+	background: url(../images/sasha.JPG) no-repeat center;
+	background-size: contain;
+}
+
+.recipe-active {
+	background: url(../images/burger.JPG) no-repeat center;
+	background-size: cover;
+	position: relative;
+	width: 65%;
+}
+
+.author-active {
+	width: 35%;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.9);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	border-left: 1px solid #ffffff;
+	font-size: 20px;
+	color: $white-text;
+	text-align: center;
+	padding: 20px;
+}
+
+.author-active__photo{
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: url(../images/andrey.JPG) no-repeat center;
+	background-size: contain;
+	width: 130px;
+	height: 130px;
+}
+
+.author-active__text {
+	font-size: 30px;
+	line-height: 1.1;
+	font-weight: 700;
+	margin: 15px 0;
+	max-width: 250px;
+}
+
+.author-active__button {
+	margin-top: 20px;
+}

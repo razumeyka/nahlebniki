@@ -1,0 +1,18 @@
+extends template/inner-page.pug
+
+mixin recipe(recipeLink, recipeName, authorName, cityName)
+	a.recipes__item-wr(href='#{recipeLink}')
+		.recipes__photo
+		.recipes__photo.recipes__photo_author
+		.recipes__text
+			.recipes__caption=recipeName
+			.recipes__author=authorName
+			.recipes__city=cityName
+					
+block content
+	include template/header
+	.wrapper
+		h1.caption Блог
+	include template/about-screen
+	include template/insta
+	include template/footer

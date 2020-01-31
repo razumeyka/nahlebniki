@@ -1,0 +1,22 @@
+/* instagram_screen */
+
+.insta-screen {
+    padding: 50px 0;
+}
+
+.insta-screen__content {
+	margin: 0 -10px;
+}
+
+.insta-slider__slide {
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.insta-slider__slide a {
+	outline: none;
+}
+
+.insta-slider__slide img {
+	width: 100%;
+}

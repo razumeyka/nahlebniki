@@ -1,0 +1,42 @@
+@import "parts/jquery.fancybox.min.css";
+@import "parts/slick.less";
+@import "parts/slick-theme.less";
+@import "parts/base-blocks.scss";
+@import "parts/header.scss";
+@import "parts/main-screen.scss";
+@import "parts/about.scss";
+@import "parts/recipes.scss";
+@import "parts/recipe.scss";
+@import "parts/form.scss";
+@import "parts/insta.scss";
+
+
+footer {
+	background: $bright-color;
+	padding: 7px 0;
+	font-size: 12px;
+	text-align: center;
+}
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+    
+	
+}
+
+@media screen and (max-width: 1023px) {
+    
+    
+}
+
+@media screen and (max-width: 767px) {
+    
+
+}
+
+@media screen and (max-width: 639px) {
+    
+
+	
+}

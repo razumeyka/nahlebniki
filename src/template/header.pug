@@ -1,12 +1,22 @@
-- var links = ["Главная", "Рецепты", "Блог", "О нас", "Покормить нахлебников"];
-
 header
-	.wrapper.flex_between
-		a(class="logo" href="/")
-		nav(class="navbar")
-			ul(class="menu")
-				for name in links
+	.top-line
+		.wrapper
+			.top-line__texts
+				a.top-line__title(href="/") нахлебники
+				h1.top-line__sub-title рецепты из путешествий
+			.burger
+				span
+	.menu-line
+		.wrapper
+			nav(class="navbar")
+				ul(class="menu")
 					li
-						a(href="#")= name
-		.burger
-			span
+						a(href="/") Главная
+					li
+						a(href="recipes.html") Рецепты
+					li
+						a(href="blog.html") Блог
+					li
+						a(href="about.html") О нас
+					li
+						a(href="#") Покормить нахлебников

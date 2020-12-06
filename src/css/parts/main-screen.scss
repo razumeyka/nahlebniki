@@ -1,58 +1,58 @@
 .main-screen {
-	border-top: 1px solid #292929;
-	border-bottom: 1px solid #292929;
+	border-top: 1px solid #888686;
+	border-bottom: 1px solid #888686;
+}
+
+.author-slider {
+	display: flex;
+	flex-wrap: nowrap;
 }
 
 .author-plates {
+	display: flex;
+	flex-wrap: wrap;
 	width: 35%;
-}
-
-.author-plates__plate {
-	width: 33.3333%;
-	position: relative;
-	cursor: pointer;
-	&:before {
-		content: "";
-		background: rgba(0,0,0,0.4);
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
+	&__plate {
+		box-sizing: border-box;
+		width: 33.3333%;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s linear;
+		&.active {
+			z-index: 1;
+			box-shadow: 0 0 10px 0px #343434;
+			border: 3px solid $bright-color;
+		}
+		&_author1 {
+			background: url(../images/genia.jpg) no-repeat center;
+			background-size: contain;
+		}
+		&_author2 {
+			background: url(../images/andrey.JPG) no-repeat center;
+			background-size: contain;
+		}
+		&_author3 {
+			background: url(../images/anya.JPG) no-repeat center;
+			background-size: contain;
+		}
+		&_author4 {
+			background: url(../images/nevena.jpg)  no-repeat center;
+			background-size: contain;
+		}
+		&_author5 {
+			background: url(../images/mama.jpg) no-repeat center;
+			background-size: contain;
+		}
+		&_author6 {
+			background: url(../images/sasha.JPG) no-repeat center;
+			background-size: contain;
+		}
+		&:hover {
+			position: relative;
+			transform: scale(1.2);
+			z-index: 2;
+		}
 	}
-	&:hover:before {
-		display: none;
-	}
-}
-
-.author-plates__plate_author1 {
-	background: url(../images/genia.jpg) no-repeat center;
-	background-size: contain;
-}
-
-.author-plates__plate_author2 {
-	background: url(../images/andrey.JPG) no-repeat center;
-	background-size: contain;
-}
-
-.author-plates__plate_author3 {
-	background: url(../images/anya.JPG) no-repeat center;
-	background-size: contain;
-}
-
-.author-plates__plate_author4 {
-	background: url(../images/nevena.jpg)  no-repeat center;
-	background-size: contain;
-}
-
-.author-plates__plate_author5 {
-	background: url(../images/mama.jpg) no-repeat center;
-	background-size: contain;
-}
-
-.author-plates__plate_author6 {
-	background: url(../images/sasha.JPG) no-repeat center;
-	background-size: contain;
 }
 
 .recipe-active {
@@ -80,25 +80,93 @@
 	color: $white-text;
 	text-align: center;
 	padding: 20px;
+	&__photo{
+		box-sizing: border-box;
+		border-radius: 50%;
+		background: url(../images/andrey.JPG) no-repeat center;
+		background-size: contain;
+		width: 130px;
+		height: 130px;
+	}
+	&__text {
+		font-size: 30px;
+		line-height: 1.1;
+		font-weight: 700;
+		padding: 15px 0;
+		margin-bottom: 20px;
+		max-width: 250px;
+		border-bottom: 1px solid #888686;
+	}
+	&__button {
+		margin-top: 20px;
+	}
 }
 
-.author-active__photo{
-	box-sizing: border-box;
-	border-radius: 50%;
-	background: url(../images/andrey.JPG) no-repeat center;
-	background-size: contain;
-	width: 130px;
-	height: 130px;
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+    .author-active {
+		font-size: 14px;
+		padding: 10px;
+		&__photo {
+			width: 70px;
+			height: 70px;
+		}
+		&__text {
+			font-size: 20px;
+			padding: 10px 0;
+			margin-bottom: 10px;
+		}
+		&__button {
+			margin-top: 15px;
+			font-size: 16px;
+			padding: 12px 10px;
+		}
+	}
 }
 
-.author-active__text {
-	font-size: 30px;
-	line-height: 1.1;
-	font-weight: 700;
-	margin: 15px 0;
-	max-width: 250px;
+@media screen and (max-width: 1023px) {
+	
+	.author-active {
+		width: 40%;
+	}
 }
 
-.author-active__button {
-	margin-top: 20px;
+@media screen and (max-width: 767px) {
+	.main-screen {
+		flex-direction: column-reverse;
+	}
+    .author-plates {
+		width: 100%;
+	}
+	.recipe-active {
+		width: 100%;
+		height: 340px;
+	}
+	
+	.author-active {
+		width: 100%;
+		background: rgba(0, 0, 0, 0.4);
+		&__photo {
+			width: 90px;
+			height: 90px;
+		}
+		&__text {
+			font-size: 22px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		&__button {
+			margin-top: 10px;
+			background: none;
+			border: 2px solid $bright-color;
+			color: $bright-color;
+			max-width: 220px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 639px) {
+	
 }

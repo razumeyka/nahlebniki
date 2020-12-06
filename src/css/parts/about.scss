@@ -1,52 +1,97 @@
 .about-screen {
-	padding: 70px 0;
+	background: url(../../images/old-paper-pattern.png) repeat top center,#f4f1f1;
+	padding: $common-padding;
+	margin-top: 50px;
 }
 
-.photo-info__photos {
-	width: 350px;
-	height: 400px;
+.photo-info {
+	display: flex;
+	&__photo {
+		box-sizing: border-box;
+		border-radius: 50%;
+		width: 350px;
+		height: 350px;
+		margin: auto 0;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			box-sizing: border-box;
+			border-radius: 50%;
+		}
+	}
+	&__info {
+		flex: 1;
+		box-sizing: border-box;
+		padding: 0 0 0 40px;
+	}
+	&__caption {
+		text-align: left;
+	}
+	&__info p {
+		font-size: 18px;  
+		line-height: 1.5;
+		color: $black-text;
+		margin: 8px 0;
+	}
+	&__link {
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 700;
+		margin-top: 25px;
+		position: relative;
+		&:before {
+			content: "";
+			height: 2px;
+			width: 100%;
+			background: $bright-color;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
 }
 
-.photo-info__photo {
-	background: url(../../images/nahlebniki1.JPG) no-repeat center top;
-	background-size: contain;
-	width: 350px;
-	height: 400px;
+
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+    
 }
 
-.photo-info__photo_2 {
-	background: url(../../images/nahlebniki2.JPG) no-repeat center top;
-	background-size: contain;
+@media screen and (max-width: 1023px) {
+	.photo-info {
+		&__photo {
+			width: 250px;
+			height: 250px;
+		}
+		&__info {
+			padding: 0 0 0 25px;
+			p {
+				font-size: 16px;
+			}
+		}
+	}
 }
 
-.photo-info__photo_3 {
-	background: url(../../images/nahlebniki3.JPG) no-repeat center top;
-	background-size: contain;
+@media screen and (max-width: 767px) {
+	.photo-info {
+		flex-direction: column;
+		&__photo {
+			margin: 0 auto 30px;
+		}
+		&__info {
+			padding: 0;
+			.caption {
+				text-align: center;
+			}
+		}
+	}
 }
 
-.photo-info__photo_4 {
-	background: url(../../images/nahlebniki4.JPG) no-repeat center top;
-	background-size: contain;
-}
-
-.photo-info__photo_5 {
-	background: url(../../images/nahlebniki5.JPG) no-repeat center top;
-	background-size: contain;
-}
-
-.photo-info__info {
-	flex: 1;
-	box-sizing: border-box;
-	padding: 0 0 0 40px;
-}
-
-.photo-info__caption {
-	text-align: left;
-}
-
-.photo-info__info p {
-	font-size: 18px;  
-	line-height: 1.55;
-	color: $black-text;
-	margin: 8px 0;
+@media screen and (max-width: 639px) {
+	
 }

@@ -1,0 +1,22 @@
+$dark: #000;
+$dark-matt: #0f0f0e;
+//$dark-matt: #131313;
+$dark-light: #313131;
+$primary: #dfbb0b;
+$secondary: #795f31;
+$common-padding: 80px 0;
+
+
+@media screen and (max-width: 767px) {
+	$common-padding: 45px 0;
+}
+
+
+
+$main-font: 'Acrom', sans-serif;
+$black-text: #000000;
+$white-text: #ffffff;
+//$bright-color: #dfbb0b;
+$bright-color: #eec70c;
+
+

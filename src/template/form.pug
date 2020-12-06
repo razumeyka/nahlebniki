@@ -1,5 +1,6 @@
 .form-screen
-	.wrapper
+	.wrapper.flex_between
+		.fork
 		.form
 			.caption Для самых смелых :))
 			.small-caption Позвать нахлебников и рассказать свой фирменный рецепт можно, заполнив эту форму
@@ -11,8 +12,8 @@
 						input(type="еуче" name="E-mail" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="E-mail")
 					span.wpcf7-form-control-wrap
 						input(type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Город")
-					span.wpcf7-form-control-wrap
-						button.button Зову
+					span.wpcf7-form-control-wrap.flex
+						button.wpcf7-form__button.button Зову
 //				.form-row.flex
 //					span.wpcf7-form-control-wrap.wpcf7-form-control-wrap_textarea
 //						textarea(type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Список ингредиентов и пошаговое описание процесса приготовления")

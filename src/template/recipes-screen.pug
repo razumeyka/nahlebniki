@@ -7,10 +7,10 @@ mixin recipe(recipeLink, recipeName, authorName, cityName)
 			.recipes__author=authorName
 			.recipes__city=cityName	
 
-.recipes
+.recipes-screen
 	.wrapper
 		h1(class="caption") Что здесь вкусненького
-		.recipes__inner.flex
+		.recipes.flex
 			.recipes__item
 				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 			.recipes__item
@@ -27,4 +27,4 @@ mixin recipe(recipeLink, recipeName, authorName, cityName)
 				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 			.recipes__item
 				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
-		a(href="#" class="button") Смотреть все рецепты
+		a(href="#" class="button recipes-screen__button") Смотреть все рецепты

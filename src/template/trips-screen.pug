@@ -1,0 +1,23 @@
+mixin trip(tripPhoto, tripName)
+	a.trips__content
+		img(src=tripPhoto)
+		.trips__caption=tripName
+
+.trips-screen
+	.wrapper
+		.caption.caption-on-white Блог о еде и странствиях
+		.trips
+			.trips__item.trips__item_lg
+				+trip( "../../images/nahlebniki4.JPG", "Рождество в украинском селе")
+			.trips__item.trips__item_xs
+				+trip("../../images/nahlebniki.JPG", "Походная кухня")
+			.trips__item
+				+trip("../../images/nahlebniki1.jpg", "Гастроомический Львов")
+			.trips__item.trips__item_xs
+				+trip("../../images/nevena.jpg", "Походная кухня")
+			.trips__item.trips__item_sm
+				+trip("../../images/my.jpg", "Походная кухня")
+			.trips__item
+				+trip("../../images/nahlebniki2.jpg", "Белорусская кухня")
+			.trips__item.trips__item_lg
+				+trip("../../images/nahlebniki3.jpg", "Рождество в украинском селе")

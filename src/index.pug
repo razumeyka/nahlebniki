@@ -1,9 +1,27 @@
 extends template/base.pug
 block content
-	include template/header
+	header
+		.top-line
+			.wrapper
+				.top-line__texts
+					a.top-line__title(href="/") нахлебники
+					h1.top-line__sub-title рецепты из путешествий
+				.burger
+					span
+		.menu-line
+			.wrapper
+				nav(class="navbar")
+					ul(class="menu")
+						li
+							a(href="recipes.html") Рецепты
+						li
+							a(href="blog.html") Путешествия
+						li
+							a(href="about.html") О нас
 	include template/main-screen
 	include template/about-screen
-	include template/recipes-screen	
+	include template/recipes-screen
+	include template/trips-screen
 	include template/form
 	include template/insta
 	include template/footer

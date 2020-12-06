@@ -24,10 +24,6 @@
     font-style: normal;
 }
 
-$main-font: 'Acrom', sans-serif;
-$black-text: #000000;
-$white-text: #ffffff;
-$bright-color: #077d82;
 
 .flex {
     display: flex;
@@ -41,11 +37,11 @@ $bright-color: #077d82;
 }
 
 body{
-	background: #000000;
+	background: $dark-matt;
     margin:0;
 	padding: 0;
 	font-family: $main-font, sans-serif;
-	font-size: 20px;
+	font-size: 18px;
     font-weight: 400;
 	color: $white-text;
 	line-height:1.35; 
@@ -62,6 +58,7 @@ h1,h2,h3,h4,h5 {
 }
 
 a {
+	color: $bright-color;
 	text-decoration: none;
 }
 
@@ -72,24 +69,28 @@ a {
 }
 
 .caption {
-	font-size: 30px;
+	font-size: 42px;
 	font-weight: 700;
 	text-align: center;
-	margin: 0;
+	margin: 0 0 35px;
 }
 
 .small-caption {
-	font-size: 18px;
+	font-size: 26px;
 	font-weight: 400;
 	text-align: center;
 	max-width: 900px;
-	margin: 0 auto 20px;
+	margin: 0 auto 30px;
 }
 
 .white-block	{
-	background: #fff;
+	background: url(../../images/5723.jpg) repeat top center;
+	background: url(../../images/5384.jpg) repeat top center;
+	background: url(../../images/528.jpg) repeat top center;
+	background: url(../../images/old-paper-pattern.png) repeat top center,#f4f1f1;
 	padding: 40px 45px;
 	color: $black-text;
+	overflow: hidden;
 }
 
 .caption-on-white {
@@ -112,12 +113,23 @@ a {
 	
 	width: 100%;
 	max-width: 280px;
-	height: 60px;
 	font-size: 20px;
-	color: $white-text;
+
+	line-height: 1;
 	font-weight: 700;
-	padding: 17px 15px 15px;
+	padding: 20px 15px 19px;
+	transition: all 0.2s linear;
+	&:hover {
+		background: #d5b20a;
+	}
 } 
+
+.button_small {
+	height: 40px;
+	font-size: 18px;
+	padding: 9px 10px;
+	max-width: 180px;
+}
 
 .button_black {
 	border: 2px solid rgb(0, 0, 0);
@@ -128,11 +140,16 @@ a {
 .button_framed {
 	background: transparent;
 	border: 2px solid $bright-color;
+	color: $bright-color;
 	max-width: 200px;
-	height: 50px;
-	font-size: 18px;
+	font-size: 20px;
+	line-height: 1;
 	font-weight: 400;
-	padding: 11px 15px 12px;
+	padding: 18px 20px;
+	&:hover {
+		background: #dfbb0b;
+		color: $black-text;
+	}
 }
 
 .button_framed:hover {
@@ -150,15 +167,6 @@ a {
 	box-shadow: 0 1px 7px 0px #a09e9e69;
 }
 
-.filters {
-	width: 100%;
-	justify-content: center;
-	margin: 30px 0 20px;
-}
-
-.filters__button {
-	margin-right: 15px;
-}
 
 
 
@@ -166,9 +174,29 @@ a {
 
 /* media */
 
-@media screen and (max-width: 639px) {
-	
-	
-	
-	
+@media screen and (max-width: 1279px) {
+	.wrapper {
+		padding: 0 15px;
+	}
 }
+
+@media screen and (max-width: 1023px) {
+	.caption {
+		font-size: 36px;
+		margin: 0 0 25px;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	
+	.caption {
+		font-size: 32px;
+	}
+	.small-caption {
+		font-size: 18px;
+		margin: 0 auto 20px;
+	}
+}
+
+

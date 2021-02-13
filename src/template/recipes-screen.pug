@@ -1,16 +1,17 @@
 mixin recipe(recipeLink, recipeName, authorName, cityName)
 	a.recipes__item-wr(href='#{recipeLink}')
 		.recipes__photo
-		.recipes__photo.recipes__photo_author
+			img(src="../images/lavash.jpg" class="recipes__photo-food")
+			img(src="../images/nevena.jpg" class="recipes__photo-author")
 		.recipes__text
 			.recipes__caption=recipeName
 			.recipes__author=authorName
-			.recipes__city=cityName	
+			.recipes__city=cityName
 
 .recipes-screen
 	.wrapper
 		h1(class="caption") Что здесь вкусненького
-		.recipes.flex
+		.recipes
 			.recipes__item
 				+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 			.recipes__item

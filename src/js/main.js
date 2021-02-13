@@ -1,5 +1,4 @@
-@@include('./lib/jquery.fancybox.min.js')
-@@include('./lib/slick.js')
+@@include('./lib/slick.min.js')
 
 $(document).ready(function(){
 	
@@ -43,28 +42,55 @@ $(document).ready(function(){
 
 // fixed
 	
-	var listOffset = $(".fixed-column").offset().top;
-	$(window).scroll(function() {
-		var docScroll = $(document).scrollTop();
-//		console.log(listOffset);
-//		console.log(docScroll);
-		if (docScroll > listOffset){
-			$('.fixed-column').addClass("fixed");
-		}
-		else {
-			$('.fixed-column').removeClass("fixed");
-		}
-	});
+//	var listOffset = $(".fixed-column").offset().top;
+//	$(window).scroll(function() {
+//		var docScroll = $(document).scrollTop();
+//		if (docScroll > listOffset){
+//			$('.fixed-column').addClass("fixed");
+//		}
+//		else {
+//			$('.fixed-column').removeClass("fixed");
+//		}
+//	});
 });
 
-'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
 	
-	const tripCircle = document.querySelectorAll('.trips__item'),
-		  authorPlate = document.querySelectorAll('.author-plates__plate');
+	
+// main-screen slider
+	
+//	const authorSlider = document.querySelector('.author-slider'),
+//	  authorSliderPhoto = authorSlider.querySelectorAll('.author-slider__photo'),
+//	  authorSliderFood = authorSlider.querySelectorAll('.author-slider__foodphotos img'),
+//	  authorSliderDetails = authorSlider.querySelectorAll('.author-slider__author');
+//	
+//	authorSliderPhoto.forEach( (recipe, i) => {
+//		recipe.addEventListener( 'click', () => {
+//			
+//			authorSliderDetails.forEach(item => {
+//				item.classList.remove('active');
+//			});
+//			authorSliderDetails[i].classList.add('active');
+//
+//			authorSliderPhoto.forEach(item => {
+//				item.classList.remove('active');
+//			});
+//			authorSliderPhoto[i].classList.add('active');
+//			
+//			authorSliderFood.forEach(item => {
+//				item.classList.remove('active');
+//			});
+//			authorSliderFood[i].classList.add('active');
+//		});
+//	});
+	
+	
 	
 // height
+	
+	const tripCircle = document.querySelectorAll('.trips__item'),
+		  authorPlate = document.querySelectorAll('.author-plates__plate');
 
 	function plateHeight(item) {
 		item.forEach(plate =>  {
@@ -121,8 +147,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		plateHeight(authorPlate);
 	});
 })
-
-
-
-
 

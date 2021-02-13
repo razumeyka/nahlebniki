@@ -49,10 +49,11 @@
 		outline: 0;
 		position: relative;
 		cursor: pointer;
-		transition: all 0.2s linear;
+		overflow: hidden;
 		&:hover {
-			width: 105%;
-			height: 105%;
+			img {
+				transform: scale(1.1);
+			}
 			&:before {
 				content: "";
 				background: rgba(0, 0, 0,.5);
@@ -66,7 +67,7 @@
 				z-index: 2;
 			}
 			.trips__caption {
-				display: block;
+				opacity: 1;
 			}
 		}
 	}
@@ -81,9 +82,10 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
+		transition: all 0.2s linear;
 	}
 	&__caption {
-		display: none;
+		opacity: 0;
 		font-size: 24px;
 		font-weight: 700;
 		color: #fff;
@@ -92,6 +94,7 @@
 		position: relative;
 		z-index: 3;
 		max-width: 70%;
+		transition: all 0.2s linear;
 	}
 	&__item {
 		&_lg {

@@ -6,7 +6,8 @@
 		.recipe-header__main-photo
 			img(src="images/lavash.jpg" alt="")
 			.recipe-header__author
-				.recipe-header__icon.recipe-header__icon_belarus
+				.recipe-header__icon
+					img(src="images/icons/maps/belarus-map.png" alt="")
 				.recipe-header__caption Андреевский лаваш
 				.recipe-header__name Андрей Разумейко
 				.recipe-header__country Беларусь, г.Орша
@@ -43,7 +44,7 @@
 						a(href="#" class="social__icon social__icon_viber")
 						a(href="#" class="social__icon social__icon_mail")
 					.recipe__small-caption Оставить комментарий
-					div(role="form" class="wpcf7" id="wpcf7-f4-o1" lang="ru-RU" dir="ltr")
+					div(role="form" class="wpcf7" lang="ru-RU" dir="ltr")
 						form.wpcf7-form
 							span.wpcf7-form-control-wrap
 								textarea(type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ваш комментарий")
@@ -52,6 +53,12 @@
 				.columns__right-column
 					.fixed-column
 						.recipe__caption Ингредиенты
+						.recipe__small-caption Количество порций
+						.recipe__portions
+							input(type="text" name="portion" value="2" class="wpcf7-form-control")
+							div
+								.recipe__portions-plus +
+								.recipe__portions-minus -
 						ul.ingredients-list
 							for item in ingredients
 								li= item

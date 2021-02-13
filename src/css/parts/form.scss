@@ -1,12 +1,12 @@
 .form-screen {
-	background: $dark;
+	background: #000;
 	.caption {
 		margin-bottom: 10px;
 	}
 }
 
 .fork {
-	background: url(../../images/background-fork3.jpg) no-repeat bottom left;
+	background: url(../images/background-fork3.jpg) no-repeat bottom left;
 	background-size: cover;
 	width: 40%;
 }
@@ -26,7 +26,7 @@
 }
 
 .wpcf7-form-control-wrap{
-    display: block;
+	display: block;
 	box-sizing: border-box;
 	margin: 15px 0; 
 }
@@ -36,14 +36,14 @@
 }
 
 .wpcf7-form-control{
-    display: block;
-    box-sizing: border-box;
+	display: block;
+	box-sizing: border-box;
 	background-color: #000000;
 	border: 1px solid rgb(255, 255, 255);
-    height: 60px;
-    width: 100%;
-    outline: 0;
-    padding: 0 20px;
+	height: 60px;
+	width: 100%;
+	outline: 0;
+	padding: 0 20px;
 	font-size: 18px;
 	line-height: 60px;
 	color: #fff;
@@ -58,27 +58,27 @@
 }
 
 .wpcf7-form-control-wrap textarea {
-    display: block;
-    box-sizing: border-box;
-    border: none;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    resize: vertical;
-    padding: 20px 20px;
-    height: 120px;
-    min-height: 120px;
-    font-size: 18px;
-    line-height: 1.35;
+	display: block;
+	box-sizing: border-box;
+	border: none;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	resize: vertical;
+	padding: 20px 20px;
+	height: 120px;
+	min-height: 120px;
+	font-size: 18px;
+	line-height: 1.35;
 }
 
 .input_wr {
 	display: block;
-    font-size: 17px;
-    border: 1px solid rgb(255, 255, 255);
-    padding: 15px;
-    margin: 25px 0;
-    position: relative;
+	font-size: 17px;
+	border: 1px solid rgb(255, 255, 255);
+	padding: 15px;
+	margin: 25px 0;
+	position: relative;
 }
 
 .wpcf7-form-control[type=file]{
@@ -92,10 +92,10 @@
 }
 
 .wpcf7-not-valid-tip{
-    display: block;
-    font-size: 13px;
-    color: #ff65a1;
-    margin-top: 3px;
+	display: block;
+	font-size: 13px;
+	color: #ff65a1;
+	margin-top: 3px;
 }
 
 
@@ -115,7 +115,7 @@
 	.fork {
 		display: none;
 	}
-    .form {
+	.form {
 		padding: 45px 0;
 		width: 100%;
 		max-width: 360px;

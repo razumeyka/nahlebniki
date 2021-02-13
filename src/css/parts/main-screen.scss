@@ -6,87 +6,107 @@
 .author-slider {
 	display: flex;
 	flex-wrap: nowrap;
-}
-
-.author-plates {
-	display: flex;
-	flex-wrap: wrap;
-	width: 35%;
-	&__plate {
+	&__photos {
+		display: flex;
+		flex-wrap: wrap;
+		width: 35%;
+		z-index: 3;
+	}
+	&__photo {
 		box-sizing: border-box;
 		width: 33.3333%;
 		position: relative;
 		cursor: pointer;
-		transition: all 0.3s linear;
+		transition: transform 0.4s linear;
+		overflow: hidden;
+		&:before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,0.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: background 0.4s linear;
+		}
 		&.active {
-			z-index: 1;
+			z-index: 3;
 			box-shadow: 0 0 10px 0px #343434;
 			border: 3px solid $bright-color;
-		}
-		&_author1 {
-			background: url(../images/genia.jpg) no-repeat center;
-			background-size: contain;
-		}
-		&_author2 {
-			background: url(../images/andrey.JPG) no-repeat center;
-			background-size: contain;
-		}
-		&_author3 {
-			background: url(../images/anya.JPG) no-repeat center;
-			background-size: contain;
-		}
-		&_author4 {
-			background: url(../images/nevena.jpg)  no-repeat center;
-			background-size: contain;
-		}
-		&_author5 {
-			background: url(../images/mama.jpg) no-repeat center;
-			background-size: contain;
-		}
-		&_author6 {
-			background: url(../images/sasha.JPG) no-repeat center;
-			background-size: contain;
+			transform: scale(1.1);
+			&:before {
+				background: rgba(255,255,255,0);
+			}
 		}
 		&:hover {
 			position: relative;
-			transform: scale(1.2);
+			z-index: 2;
+			&:before {
+				background: rgba(255,255,255,0);
+			}
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	&__recipes {
+		position: relative;
+		width: 65%;
+	}
+	&__foodphotos {
+		img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 0;
+			opacity: 0;
+			transition: opacity 0.4s linear;
+			&.active {
+				z-index: 1;
+				opacity: 1;
+			}
+		}
+	}
+	&__author {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 35%;
+		height: 100%;
+		box-sizing: border-box;
+		background-color: rgba(0, 0, 0, 0.9);
+		background: $dark-matt;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+		border-left: 1px solid #ffffff;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 20px;
+		color: $white-text;
+		text-align: center;
+		padding: 20px;
+		opacity: 0;
+		z-index: 0;
+		transition: opacity 0.4s linear;
+		&.active {
+			opacity: 1;
 			z-index: 2;
 		}
 	}
-}
-
-.recipe-active {
-	background: url(../images/burger.JPG) no-repeat center;
-	background-size: cover;
-	position: relative;
-	width: 65%;
-}
-
-.author-active {
-	width: 35%;
-	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.9);
-	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-	position: absolute;
-	left: 0;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	border-left: 1px solid #ffffff;
-	font-size: 20px;
-	color: $white-text;
-	text-align: center;
-	padding: 20px;
-	&__photo{
+	&__circle-photo {
 		box-sizing: border-box;
-		border-radius: 50%;
-		background: url(../images/andrey.JPG) no-repeat center;
-		background-size: contain;
-		width: 130px;
-		height: 130px;
+		img {
+			width: auto;
+			height: auto;
+			max-width: 200px;
+			max-height: 150px;
+		}
 	}
 	&__text {
 		font-size: 30px;
@@ -106,10 +126,12 @@
 /*media*/ 
 
 @media screen and (max-width: 1279px) {
-    .author-active {
-		font-size: 14px;
-		padding: 10px;
-		&__photo {
+	.author-slider {
+		&__author {
+			font-size: 14px;
+			padding: 10px;
+		}
+		&__circle-photo {
 			width: 70px;
 			height: 70px;
 		}
@@ -127,8 +149,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-	
-	.author-active {
+	.author-slider__author {
 		width: 40%;
 	}
 }
@@ -137,18 +158,20 @@
 	.main-screen {
 		flex-direction: column-reverse;
 	}
-    .author-plates {
-		width: 100%;
-	}
-	.recipe-active {
-		width: 100%;
-		height: 340px;
-	}
 	
-	.author-active {
-		width: 100%;
-		background: rgba(0, 0, 0, 0.4);
-		&__photo {
+	.author-slider {
+		&__photos {
+			width: 100%;
+		}
+		&__recipes {
+			width: 100%;
+			height: 340px;
+		}
+		&__author {
+			width: 100%;
+			background: rgba(0, 0, 0, 0.4);
+		}
+		&__circle-photo {
 			width: 90px;
 			height: 90px;
 		}
@@ -164,7 +187,6 @@
 			max-width: 220px;
 		}
 	}
-
 }
 
 @media screen and (max-width: 639px) {

@@ -83,7 +83,7 @@ a {
 	margin: 0 auto 30px;
 }
 
-.white-block	{
+.white-block {
 	background: url(../../images/5723.jpg) repeat top center;
 	background: url(../../images/5384.jpg) repeat top center;
 	background: url(../../images/528.jpg) repeat top center;
@@ -112,13 +112,14 @@ a {
 	color: $black-text;
 	
 	width: 100%;
-	max-width: 280px;
+	max-width: 300px;
 	font-size: 20px;
+	font-weight: 700;
 
 	line-height: 1;
 	font-weight: 700;
 	padding: 20px 15px 19px;
-	transition: all 0.2s linear;
+	transition: all 0.3s linear;
 	&:hover {
 		background: #d5b20a;
 	}
@@ -138,14 +139,15 @@ a {
 } 
 
 .button_framed {
-	background: transparent;
+	background: $dark-matt;
 	border: 2px solid $bright-color;
 	color: $bright-color;
 	max-width: 200px;
 	font-size: 20px;
 	line-height: 1;
-	font-weight: 400;
-	padding: 18px 20px;
+	font-weight: 700;
+	padding: 18px 15px;
+	transition: all 0.3s linear;
 	&:hover {
 		background: #dfbb0b;
 		color: $black-text;

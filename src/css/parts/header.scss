@@ -1,9 +1,9 @@
 /*header*/
 
 header {
-    box-sizing: border-box;
-    padding: 10px 0;
-    min-width: 360px;
+	box-sizing: border-box;
+	padding: 10px 0;
+	min-width: 360px;
 	position: relative;
 	.wrapper {
 		align-items: center;
@@ -16,6 +16,7 @@ header {
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
+		position: relative;
 	}
 	&__texts {
 		flex-shrink: 0;
@@ -118,7 +119,7 @@ header {
     position: absolute;
     width: 46px;
     height: 46px;
-    right: 40px;
+    right: 36px;
     top: 0;
 	bottom: 0;
 	margin: auto 0;

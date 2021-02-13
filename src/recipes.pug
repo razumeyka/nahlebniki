@@ -3,7 +3,8 @@ extends template/inner-page.pug
 mixin recipe(recipeLink, recipeName, authorName, cityName)
 	a.recipes__item-wr(href='#{recipeLink}')
 		.recipes__photo
-		.recipes__photo.recipes__photo_author
+			img(src="../images/lavash.jpg" class="recipes__photo-food")
+			img(src="../images/nevena.jpg" class="recipes__photo-author")
 		.recipes__text
 			.recipes__caption=recipeName
 			.recipes__author=authorName
@@ -22,11 +23,17 @@ block content
 					.tabs__button.button.button_framed
 						span Закуски
 					.tabs__button.button.button_framed 
+						span Горячее
+					.tabs__button.button.button_framed 
 						span Десерты
+					.tabs__button.button.button_framed 
+						span Другое
+					.tabs__button.button.button_framed 
+						span По странам
 					
 				.tabs__content
 					.tabs__item
-						.recipes.flex
+						.recipes
 							.recipes__item
 								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 							.recipes__item
@@ -40,7 +47,7 @@ block content
 							.recipes__item
 								+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
 					.tabs__item
-						.recipes.flex
+						.recipes
 							.recipes__item
 								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 							.recipes__item
@@ -48,7 +55,7 @@ block content
 							.recipes__item
 								+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
 					.tabs__item
-						.recipes.flex
+						.recipes
 							.recipes__item
 								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 							.recipes__item
@@ -59,7 +66,22 @@ block content
 								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
 							.recipes__item
 								+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
-
-	include template/form
+					.tabs__item
+						.recipes
+							.recipes__item
+								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+							.recipes__item
+								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+							.recipes__item
+								+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
+					.tabs__item
+						.recipes
+							.recipes__item
+								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+							.recipes__item
+								+recipe("#", "Вертолетики", "Елена", "г. Борисов, Беларусь")
+							.recipes__item
+								+recipe("#", "Драники", "Мирослава", "г. Черновцы, Украина")
+	include template/trips-screen
 	include template/insta
 	include template/footer

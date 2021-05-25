@@ -1,5 +1,3 @@
-- var ingredients = ["Лаваш - 2 шт", "Рикотта - 250г", "Сыр сулугуни - 250г", "Помидиры - 1 шт", "Зелень"];
-
 .recipe-screen
 	.recipe-header.flex
 		img.recipe-header__author-photo(src="images/andrey.jpg" alt="")
@@ -11,55 +9,62 @@
 				.recipe-header__caption Андреевский лаваш
 				.recipe-header__name Андрей Разумейко
 				.recipe-header__country Беларусь, г.Орша
-	.wrapper
-		.recipe.white-block
-			.columns.flex
-				.columns__left-column
-					.recipe__caption Немного предистории
-					p.recipe__story Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт. И ниже фото процесса
-					.recipe__caption Приготовление
-					.recipe__item
-						.recipe__small-caption Шаг 1
-						p.recipe__description Натереть сыр на крупной тёрке
-						img.recipe__photo(src="images/lavash.jpg" alt="")
-					.recipe__item
-						.recipe__small-caption Шаг 2
-						p.recipe__description Смазать лаваш рикоттой, посыпать сыром, небольшими ломтиками помидор и зеленью
-						.recipe__photos.flex
-							.recipe__photo-wr
-								img.recipe__photo(src="images/lavash.jpg" alt="")
-							.recipe__photo-wr
-								img.recipe__photo(src="images/lavash.jpg" alt="")
-					.recipe__item
-						.recipe__small-caption Шаг 3
-						p.recipe__description Отправить в духовку на 180°С на 10-15 минут до расплавления сыра
-						img.recipe__photo(src="images/lavash.jpg" alt="")
-					.recipe__small-caption.recipe__caption_center Поделиться рецептом
-					.social.flex
-						a(href="#" class="social__icon social__icon_fb")
-						a(href="#"  class="social__icon social__icon_tweet")
-						a(href="#" class="social__icon social__icon_vk")
-						a(href="#"  class="social__icon social__icon_ok")
-						a(href="#" class="social__icon social__icon_telegram")
-						a(href="#" class="social__icon social__icon_viber")
-						a(href="#" class="social__icon social__icon_mail")
-					.recipe__small-caption Оставить комментарий
-					div(role="form" class="wpcf7" lang="ru-RU" dir="ltr")
-						form.wpcf7-form
-							span.wpcf7-form-control-wrap
-								textarea(type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ваш комментарий")
-							span.wpcf7-form-control-wrap
-								button.button.recipe__button Отправить
-				.columns__right-column
-					.fixed-column
-						.recipe__caption Ингредиенты
-						.recipe__small-caption Количество порций
-						.recipe__portions
-							input(type="text" name="portion" value="2" class="wpcf7-form-control")
-							div
-								.recipe__portions-plus +
-								.recipe__portions-minus -
-						ul.ingredients-list
-							for item in ingredients
-								li= item
-								
+	.white-block
+		.wrapper
+			.recipe
+				.columns.flex
+					.columns__left-column
+						.recipe__caption Немного предистории
+						p.recipe__story Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт.Здесь будет несколько строчек про рецепт, про автора рецепта, может біть история о том, как мі снимали рецепт. И ниже фото процесса
+						.recipe__caption Приготовление
+						.recipe__item
+							.recipe__small-caption Шаг 1
+							p.recipe__description Натереть сыр на крупной тёрке
+							img.recipe__photo(src="images/lavash.jpg" alt="")
+						.recipe__item
+							.recipe__small-caption Шаг 2
+							p.recipe__description Смазать лаваш рикоттой, посыпать сыром, небольшими ломтиками помидор и зеленью
+							.recipe__photos.flex
+								.recipe__photo-wr
+									img.recipe__photo(src="images/lavash.jpg" alt="")
+								.recipe__photo-wr
+									img.recipe__photo(src="images/lavash.jpg" alt="")
+						.recipe__item
+							.recipe__small-caption Шаг 3
+							p.recipe__description Отправить в духовку на 180°С на 10-15 минут до расплавления сыра
+							img.recipe__photo(src="images/lavash.jpg" alt="")
+					.columns__right-column
+						.fixed-column
+							.recipe__caption Ингредиенты
+							.recipe__small-caption Количество порций
+							.recipe__portions
+								input(type="number" name="portion" value="2" id="portion" class="wpcf7-form-control")
+								div
+									.recipe__portions-plus +
+									.recipe__portions-minus -
+							ul.ingredients-list
+								li Лаваш - 
+									span 2
+								li Рикотта - 
+									span 250
+								li Сыр сулугуни - 
+									span 250
+								li Помидиры - 
+									span 1
+								li Зелень
+				.recipe__small-caption.recipe__caption_center Поделиться рецептом
+				.social.flex
+					a(href="#" class="social__icon social__icon_fb")
+					a(href="#"  class="social__icon social__icon_tweet")
+					a(href="#" class="social__icon social__icon_vk")
+					a(href="#"  class="social__icon social__icon_ok")
+					a(href="#" class="social__icon social__icon_telegram")
+					a(href="#" class="social__icon social__icon_viber")
+					a(href="#" class="social__icon social__icon_mail")
+				.recipe__small-caption Оставить комментарий
+				div(role="form" class="wpcf7" lang="ru-RU" dir="ltr")
+					form.wpcf7-form
+						span.wpcf7-form-control-wrap
+							textarea(type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ваш комментарий")
+						span.wpcf7-form-control-wrap
+							button.button.recipe__button Отправить

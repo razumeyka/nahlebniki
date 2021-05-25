@@ -1,25 +1,17 @@
 /* instagram_screen */
 
 .insta-screen {
-    padding: 80px 0 0;
+	padding: 80px 0 0;
 	.caption {
 		margin-bottom: 10px;
 	}
 }
-
-.insta-screen__content {
-//	margin: 0 -10px;
+.insta-slider{
+	a {
+		outline: none;
+	}
+	img {
+		width: 100%;
+	}
 }
 
-.insta-slider__slide {
-	box-sizing: border-box;
-//	padding: 0 10px;
-}
-
-.insta-slider__slide a {
-	outline: none;
-}
-
-.insta-slider__slide img {
-	width: 100%;
-}

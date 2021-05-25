@@ -46,8 +46,7 @@ header {
 	left: 0;
 	display: flex;
 	align-items: center;
-	background: url(../images/background-fork2.jpg) no-repeat center;
-	background-size: cover;
+	background: $dark-matt;
 	transform: translateY(-100%);
 	transition: all 0.4s linear;
 	box-sizing: border-box;
@@ -56,28 +55,17 @@ header {
 	&.active {
 		transform: translateY(0);
 	}
+	.burger {
+		position: absolute;
+		top: 50px;
+		right: calc((100% - 1200px)/2);
+		bottom: auto;
+	}
 }
 
-//.navbar {
-//	position: absolute;
-//	right: 0;
-//	top: 0;
-//	bottom: 0;
-//	background: $bright-color;
-//	width: 300px;
-//	border-top: 1px solid #888686;
-//	transform: translateX(300px);
-//	transition: all 0.3s linear;
-//	box-sizing: border-box;
-//	padding: 20px 40px;
-//	&.active {
-//		transform: translateX(0);
-//	}
-//}
-
 .menu {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	width: 600px;
 	li {
 		list-style: none;
@@ -93,16 +81,7 @@ header {
 		padding: 20px 0;
 		transition: color 0.2s linear; 
 		&:hover {
-			color: $black-text;
-		}
-	}
-	>li:last-child a {
-//		padding: 25px 0px 25px 15px;
-//		animation: color 1s ease-in-out infinite;
-//		-webkit-animation: color 1s ease-in-out infinite;
-		&:hover {
-//			animation: none;
-//			-webkit-animation: none;
+			color: #fff;
 		}
 	}
 }
@@ -116,57 +95,55 @@ header {
 
 .burger {
 	display: block;
-    position: absolute;
-    width: 46px;
-    height: 46px;
-    right: 36px;
-    top: 0;
+	position: absolute;
+	width: 46px;
+	height: 46px;
+	right: 36px;
+	top: 0;
 	bottom: 0;
 	margin: auto 0;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .burger span, .burger span::before, .burger span::after {
-    display: block;
-    cursor: pointer; 
-    height: 2px;
-    width: 30px;
-    background: #fff;
-    position: absolute;
-    top: 11px;
-    right: 8px;
-    transition: all .2s ease-in-out;
+	display: block;
+	cursor: pointer; 
+	height: 2px;
+	width: 30px;
+	background: #fff;
+	position: absolute;
+	top: 11px;
+	right: 8px;
+	transition: all .2s ease-in-out;
 }
 
 .burger span::before {
-    content: '';
-    left: 0;
+	content: '';
+	left: 0;
 }
 
 .burger span::after {
-    content: '';
-    left: 0;
-    top: 22px;
+	content: '';
+	left: 0;
+	top: 22px;
 }
 
 .burger_active span {
-    background-color: transparent;
+	background-color: transparent;
 }
     
- .burger_active span::before  {
-    transform: rotate(45deg);
-    top: 10px;
+.burger_active span::before  {
+	transform: rotate(45deg);
+	top: 10px;
 }
 
- .burger_active span::after  {
-    transform: rotate(-45deg);
-    top: 10px;
-} 
+.burger_active span::after  {
+	transform: rotate(-45deg);
+	top: 10px;
+}
 
 
-@media screen and (max-width: 1279px) {
-
-    
+@media screen and (max-width: 1279px) { 
 	header .burger {
 		display: block;
 	}

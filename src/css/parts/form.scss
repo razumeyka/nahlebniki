@@ -21,18 +21,10 @@
 	
 }
 
-.wpcf7-form.flex{
-	margin: -15px;
-}
-
 .wpcf7-form-control-wrap{
 	display: block;
 	box-sizing: border-box;
 	margin: 15px 0; 
-}
-
-.wpcf7-form-control-wrap.flex {
-	display: flex;
 }
 
 .wpcf7-form-control{
@@ -98,6 +90,19 @@
 	margin-top: 3px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+	-moz-appearance: number-input;
+}
 
 
 
